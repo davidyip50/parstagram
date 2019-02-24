@@ -28,6 +28,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.applicationId = "Parstagram"
                 configuration.server = "https://safe-brook-15299.herokuapp.com/parse"                    })
         )
+        
+        if( PFUser.current() != nil)
+        {
+            let main = UIStoryboard(name: "Main",
+                                    bundle: nil)
+            let feedNavigationController = main.instantiateViewController(withIdentifier: "FeedNavController")
+            
+            window?.rootViewController = feedNavigationController
+        }
+        
         return true
     }
 

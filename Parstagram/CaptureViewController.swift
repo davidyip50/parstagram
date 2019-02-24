@@ -68,6 +68,8 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         dismiss(animated: true, completion: nil)
     }
+    
+    
     /*
     // MARK: - Navigation
 
